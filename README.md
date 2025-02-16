@@ -31,11 +31,11 @@ cd weather-mongo
 ```sh
 pip install -r requirements.txt
 ```
-### 3️⃣ Retrieve your personal API keys 
+### 3️⃣ Get your personal API key and set up places to model
 1. Please register here to get API key:
 https://www.visualcrossing.com/weather-api/
-2. Update the file config_cred.json with the new API key.
-
+2. Update the file **config_cred.json** with the new API key.
+3. Update the **config_locations** file with the locations you wish to model.
 ### 4️⃣ Set up environment variables & API keys  
 Edit the **config/config_cred.json** file with your API keys.  
 Update the following variables in the docker-compose.yml file:
@@ -74,12 +74,10 @@ weather-mongo/
 │   ├── config_locations.json  # Location settings for weather data
 │── functions/                 # Custom functions for processing & modeling
 │   ├── custom_functions_app.py # Helper functions for the main app
-│── models/                    # Machine learning models
-│   ├── model.py               # SARIMA & boosting models
-│   ├── model_short.py         # Short-term forecasting models
-│── docker/                    # Docker-related files
-│   ├── Dockerfile             # Docker image configuration
-│   ├── docker-compose.yaml    # Docker Compose setup
+├── model.py                   # SARIMA & boosting models
+├── model_short.py             # Short-term forecasting models
+├── Dockerfile                 # Docker image configuration
+├── docker-compose.yaml        # Docker Compose setup
 │── app_main.py                # Main application entry point
 │── requirements.txt           # Python dependencies
 │── README.md                  # Documentation
